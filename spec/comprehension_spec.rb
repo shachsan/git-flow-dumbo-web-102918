@@ -181,14 +181,14 @@ describe "GIT" do
 
   it "24. What is the syntax for merging the local feature branch called
       'update-color-scheme' into master, assuming you're already on master" do
-    answer = "?"
+    answer = "git merge update-color-scheme"
     encoded_answer = "38db6e269e805c09ea6c4bc4eb1bb83829e7504c"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "25. Merge conflicts are bad and always mean that you did something wrong" do
     # "true" or "false", in a string
-    answer = "?"
+    answer = "false"
 
     encoded_answer = "7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"
     expect(encode(answer)).to eq(encoded_answer)
@@ -197,7 +197,7 @@ describe "GIT" do
   it "26. Once you've resolved merge conflicts, you must stage and commit the files
       in which there were conflicts" do
     # "true" or "false", in a string
-    answer = "?"
+    answer = "true"
 
     encoded_answer = "5ffe533b830f08a0326348a9160afafc8ada44db"
     expect(encode(answer)).to eq(encoded_answer)
@@ -207,7 +207,7 @@ describe "GIT" do
 # describe "DELETING BRANCHES:" do
   it "27. From master, what is the syntax for deleting a local branch called
       'add-link'?" do
-    answer = "?"
+    answer = "git branch -d add-link"
     encoded_answer = "6f91ced397c25c02c099b56d71e11955ea660fa0"
     expect(encode(answer)).to eq(encoded_answer)
   end
