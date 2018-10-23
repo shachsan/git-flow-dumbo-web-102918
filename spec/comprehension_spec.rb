@@ -101,7 +101,7 @@ describe "GIT" do
 
   it "14. From the add-img branch, what command do you run to pull down all the changes
       from the add-img branch on the remote 'upstream'?" do
-    answer = "git fetch upstream add-img"
+    answer = "git pull upstream add-img"
     encoded_answer = "6c3209e77d80f4f76e692f6b7a9fb9be17068e3e"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -145,7 +145,7 @@ describe "GIT" do
 
   it "20. It is best practice to add a feature on the master branch" do
     # "true" or "false", in a string
-    answer = "true"
+    answer = "false"
 
     encoded_answer = "7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"
     expect(encode(answer)).to eq(encoded_answer)
